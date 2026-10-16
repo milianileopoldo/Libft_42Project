@@ -6,11 +6,12 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 12:43:09 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/15 13:47:31 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/10/16 11:58:52 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
@@ -18,12 +19,8 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	size_t	src_len;
 	size_t	i;
 
-	dest_len = 0;
-	src_len = 0;
-	while (dest[dest_len] != '\0')
-		dest_len++;
-	while (src[src_len] != '\0')
-		src_len++;
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
 	if (dest_len >= size)
 		return (size + src_len);
 	i = 0;
