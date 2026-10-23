@@ -25,37 +25,27 @@ void *ft_calloc(size_t n, size_t size)
     arr = malloc(total_size);
     if (arr == NULL && total_size != 0)
         return (NULL);
-
-    i = 0;
-    while (i < n)
-        {
-            arr[i] = 0;
-            i++;
-        }  
+    ft_bzero(arr, total_size);
     return (arr);
 }
 
 // #include <stdio.h>
-
 // int main(void)
 // {
 //     int *arr;
 //     size_t i;
-
 //     arr = ft_calloc(3, sizeof(int));
 //     if (arr == NULL)
 //     {
 //         printf("Allocation failed!\n");
 //         return (1);
 //     }
-
 //     i = 0;
 //     while (i < 3)
 //     {
 //         printf("arr[%zu] = %d\n", i, arr[i]);
 //         i++;
 //     }
-
 //     free(arr);
 //     return (0);
 // }
