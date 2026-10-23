@@ -6,13 +6,14 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 14:11:20 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/21 16:38:41 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/10/23 11:35:16 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *src){
+char *ft_strdup(const char *src)
+{
     char *str;
     unsigned int i;
     unsigned int len;
