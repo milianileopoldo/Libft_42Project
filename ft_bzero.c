@@ -14,12 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *str;
-	size_t i;
-	
+	unsigned char	*str;
+	size_t			i;
+
 	str = (unsigned char *)s;
 	i = 0;
-	while (i <= n)
+	while (i < n)
 	{
 		str[i] = '\0';
 		i++;
@@ -29,9 +29,6 @@ void	ft_bzero(void *s, size_t n)
 // int main()
 // {
 // 	char str[20] = "HelloWorld";
-	
 // 	ft_bzero(str,3);
 // 	printf("%s\n", str);
 // }
-
-
