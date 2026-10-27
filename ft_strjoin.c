@@ -33,33 +33,30 @@ static	char	*ft_strcat(char *dest, const char *src)
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	unsigned int    s1_len;
-	unsigned int    s2_len;
-	unsigned int	total_len;
-	unsigned int 	i;
-	char   			*space;
-	char   			*joint;
+	unsigned int	s1_len;
+	unsigned int	s2_len;
+	unsigned int	i;
+	char			*space;
+	char			*joint;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	
-	s1_len = ft_strlen(s1); 
+	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	total_len = s1_len + s2_len + 1;
-
-	space = malloc(total_len);
+	space = malloc(s1_len + s2_len + 1);
 	if (space == NULL)
 		return (NULL);
-
 	i = 0;
 	while (i < s1_len)
 	{
 		space[i] = s1[i];
 		i++;
 	}
+	space[i] = '\0';
 	joint = ft_strcat(space, s2);
 	return (joint);
 }
+
 
 // int main(void)
 // {
