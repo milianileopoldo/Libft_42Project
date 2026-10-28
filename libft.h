@@ -6,7 +6,7 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 12:16:26 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/23 14:40:30 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/10/28 11:59:05 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	  	ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char    *ft_strtrim(char const *s1, char const *set);
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 
 #endif
