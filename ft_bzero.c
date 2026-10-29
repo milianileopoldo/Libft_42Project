@@ -6,7 +6,7 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 15:35:40 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/23 15:02:43 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/10/29 12:25:18 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-int main()
-{
-	char str[20] = "HelloWorld";
-	ft_bzero(str,3);
-	printf("%s\n", str);
-}
+// int main()
+// {
+// 	char str[20] = "HelloWorld";
+// 	ft_bzero(str,3);
+// 	printf("%s\n", str);
+// }

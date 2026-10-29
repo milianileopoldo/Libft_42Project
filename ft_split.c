@@ -6,7 +6,7 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 12:31:27 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/28 14:29:23 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/10/29 12:47:23 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ static	size_t	split_count(char const *s, char c)
 {
 	size_t	word_count;
 	size_t	i;
-	char 	*start;
-	char	*end;
-	
+
 	i = 0;
 	word_count = 0;
 	while (s[i] != '\0')
@@ -35,56 +33,91 @@ static	size_t	split_count(char const *s, char c)
 	return (word_count);
 }
 
-static 	extract
+static	size_t	word_len(char const *s, char c)
+{
+	size_t	count;
 
-// static	char	**split_free(char **words, size_t k)
-// {
-// 	/* ▢ 2: undo on failure */
-// }
+	count = 0;
+	while (s[count] != '\0' && s[count] != c)
+		count++;
+	return (count);
+}
 
-// static	*fill_word(char *dest, const char **src)
-// {
-// 	int	i;
-// 	int k;
+static	void	free_pointer_array(char **words, size_t word_count)
+{
+	size_t	i;
 
-// 	i = 0;
-// 	k = 0;
-// 	while (src[i][k] != '\0')
-// 	{
-// 		dest[i][k] = src[i][k];
-// 		i++;
-// 		k++;
-// 	}
-// }
+	i = 0;
+	if (words == NULL)
+		return ;
+	while (i < word_count)
+	{
+		free(words[i]);
+		words[i] = NULL;
+		i++;
+	}
+	free(words);
+}
+
+static int	fill_words(char **words, char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	size_t	len;
+
+	i = 0;
+	j = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] != '\0' && s[i] == c)
+			i++;
+		if (s[i] != '\0')
+		{
+			len = word_len(s + i, c);
+			words[j] = ft_substr(s, i, len);
+			if (words[j] == NULL)
+			{
+				free_pointer_array(words, j);
+				return (0);
+			}
+			i += len;
+			j++;
+		}
+	}
+	words[j] = NULL;
+	return (1);
+}
 
 char	**ft_split(char const *s, char c)
 {
 	char	**words;
-	size_t	all_words;
-	size_t	i;
 	size_t	word_count;
 
-	if (s == NULL || c == NULL)
+	if (s == NULL)
 		return (NULL);
-		
 	word_count = split_count(s, c);
-	words = malloc(sizeof(char *) * word_count + 1);
+	words = ft_calloc((word_count + 1), sizeof(char *));
 	if (words == NULL)
 		return (NULL);
-
-	i = 0;
-	while (i < word_count + 1)
-	{
-		words[i] = malloc(ft_strlen(words[i]) + 1);
-		i++;
-	}
-	all_words = malloc(sizeof(char *) * i);
-	if (all_words == NULL)
+	if (!(fill_words(words, s, c)))
 		return (NULL);
-	fill_word(words[i], all_words);
-	
 	return (words);
 }
 
-// s - string to be split
-// c - delimeter
+// int	main(void)
+// {
+// 	char	**words;
+// 	int		i;
+// 	words = ft_split("...Hello..42..", '.');
+// 	if (words == NULL)
+// 		return (1);
+// 	i = 0;
+// 	while (words[i] != NULL)
+// 	{
+// 		printf("words[%d] = %s\n", i, words[i]);
+// 		free(words[i]);
+// 		i++;
+// 	}
+// 	free(words);
+// 	return (0);
+// }
