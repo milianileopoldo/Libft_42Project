@@ -6,7 +6,7 @@
 #    By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/16 12:00:30 by mleopold          #+#    #+#              #
-#    Updated: 2026/10/23 14:29:36 by mleopold         ###   ########.fr        #
+#    Updated: 2026/10/29 12:46:29 by mleopold         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,12 @@ SRCS = ft_atoi.c \
 	ft_tolower.c \
 	ft_toupper.c \
 	ft_substr.c \
-	ft_strjoin.c 
+	ft_strjoin.c \
+	ft_strdup.c \
+	ft_substr.c \
+	ft_calloc.c \
+	ft_split.c \
+	ft_bzero.c
 	
 OBJS = $(SRCS:.c=.o)
 
@@ -58,3 +63,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
