@@ -6,7 +6,7 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 12:16:26 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/29 12:08:44 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/04 12:35:19 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdint.h>
+
+typedef struct s_list
+{
+    void    *content;
+    struct  s_list  *next;
+} t_list; 
+
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -47,7 +54,11 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
 char    *ft_strtrim(char const *s1, char const *set);
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void    ft_striteri(char *s, void (*f)(unsigned int, char*));
-char	**ft_split(char const *s, char c);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+unsigned int	ft_lstsize(t_list *lst);
+t_list  *ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 
 #endif
