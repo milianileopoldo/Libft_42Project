@@ -43,6 +43,8 @@ SRCS = ft_atoi.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
 	ft_lstadd_back.c \
+	ft_lstclear.c \
+	ft_lstiter.c
 	
 OBJS = $(SRCS:.c=.o)
 
@@ -56,6 +58,9 @@ $(NAME): $(OBJS)
 
 clean:
 	rm -f $(OBJS)
+
+cc:
+	cc -Wextra -Werror -Werror
 
 fclean: clean
 	rm -f $(NAME)
