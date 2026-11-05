@@ -27,14 +27,14 @@ void *ft_memset(void *str, int c, size_t n)
     return(ptr);
 }
 
-#include <stdio.h>
-
-int	main(void)
-{
-	char	buf[10];
-
-	ft_memset(buf, 'A', 6);
-	buf[6] = '\0';
-	printf("%s\n", buf);
-	return (0);
-}
+// #include <stdio.h>
+//
+// int	main(void)
+// {
+// 	char	buf[10];
+//
+// 	ft_memset(buf, 'A', 6);
+// 	buf[6] = '\0';
+// 	printf("%s\n", buf);
+// 	return (0);
+// }
