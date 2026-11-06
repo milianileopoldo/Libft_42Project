@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {
-	unsigned char *dst;
-    const unsigned char *srce;
-    size_t i;
+	unsigned char		*dst;
+	const unsigned char	*srce;
+	size_t				i;
 
-    dst = (unsigned char *)dest;
-    srce = (unsigned char *)src;
+	dst = (unsigned char *)dest;
+	srce = (unsigned char *)src;
 	i = 0;
 	if (dst < srce)
 	{
@@ -41,13 +41,11 @@ void	*ft_memmove(void *dest, const void *src, size_t count)
 	return (dest);
 }
 
-// #include <stdio.h>
-// #include <string.h>
 // int main()
 // {
 // 	char src[12] = "Helio";
 // 	char dest[12] = "HelloWorld";
-
+//
 // 	ft_memmove(dest + 2, src, 5); 
 // 	printf("%s\n", dest);
 // }

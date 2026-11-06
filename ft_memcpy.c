@@ -12,21 +12,23 @@
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    unsigned char *dst;
-    unsigned char *srce;
-    size_t i;
-    
-    dst = (unsigned char *)dest;
-    srce = (unsigned char *)src;
-    i = 0;
-    while (i <= n)
-    {
-        dst[i] = srce[i];
-        i++;
-    }
-    return(dest);
+	unsigned char		*dst;
+	const unsigned char	*srce;
+	size_t				i;
+	
+	if (!dest && !src)
+		return (NULL);
+	dst = (unsigned char *)dest;
+	srce = (unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		dst[i] = srce[i];
+		i++;
+	}
+	return (dest);
 }
 
 // #include <stdio.h>
@@ -35,7 +37,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 // 	char			dest[20] = "Hello";
 // 	char			src[] = "World";
 // 	char	*result;
-
+//
 //     result = ft_memcpy(dest, src, 3);
 //     printf("dest: %s\n", result);
 // }
