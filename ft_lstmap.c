@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/05 16:22:46 by mleopold            #+#    #+#           */
-/*   Updated: 2026/11/05 16:22:46 by mleopold           ###   ########.fr     */
+/*                                                       :::      ::::::::    */
+/*   ft_lstmap.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/11/05 16:22:46 by username         #+#    #+#              */
+/*   Updated: 2026/11/06 17:35:01 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*current;
 	t_list	*new_list;
@@ -25,8 +25,8 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
 	current = lst;
 	while (current != NULL)
 	{
-		new_content = f(current->content); 
-		new_node = ft_lstnew(new_content); 
+		new_content = f(current->content);
+		new_node = ft_lstnew(new_content);
 		if (new_node == NULL)
 		{
 			del(new_content);

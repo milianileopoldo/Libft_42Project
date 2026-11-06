@@ -6,11 +6,11 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 13:51:09 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/15 14:17:45 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:24:02 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

@@ -6,32 +6,32 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 14:11:20 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/23 11:35:16 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:37:54 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
-    char *str;
-    unsigned int i;
-    unsigned int len;
+	char			*str;
+	unsigned int	i;
+	unsigned int	len;
 
-    len = 0; 
-    i = 0;
-    while(src[len])
-        len++;
-    str = malloc((len + 1) * sizeof(char)); 
-    if (str == NULL)
-        return(NULL);
-    while (src[i])
-    {
-        str[i] = src[i];
-        i++;
-    }
-    str[i] = '\0';
-    return(str);
+	len = 0;
+	i = 0;
+	while (src[len])
+		len++;
+	str = malloc((len + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	while (src[i])
+	{
+		str[i] = src[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 
 // int main(void)

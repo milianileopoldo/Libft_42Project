@@ -6,7 +6,7 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 11:50:10 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/28 13:02:21 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:59:48 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	unsigned int i;
-	char 	*substr;
+	unsigned int	i;
+	char			*substr;
 
 	if (s == NULL)
-        return(NULL);
+		return (NULL);
 	if (start >= ft_strlen(s))
-    	return (ft_strdup(""));
+		return (ft_strdup(""));
 	substr = malloc(len + 1);
 	if (substr == NULL)
 		return (NULL);

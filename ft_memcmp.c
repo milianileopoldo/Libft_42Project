@@ -6,7 +6,7 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 14:26:27 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/21 14:53:07 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:18:36 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 //  	printf("%d \n", ft_memcmp("abc","abc",3));
 //     printf("%d \n", ft_memcmp("abc","abcd",4));
 // }
- 

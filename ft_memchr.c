@@ -6,7 +6,7 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 15:15:00 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/23 14:46:47 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:17:59 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	unsigned char *s;
-	size_t i;
+	unsigned char	*s;
+	size_t			i;
 
 	i = 0;
 	s = (unsigned char *)str;
@@ -34,12 +34,10 @@ void	*ft_memchr(const void *str, int c, size_t n)
 // {
 // 	char str[] = "Hello World";
 // 	char *result;
-
 // 	result = ft_memchr(str, 'W', 11);
 // 	if (result != NULL)
 // 		printf("Found: %s\n", result);
 // 	else
 // 		printf("Character not found\n");
-
 // 	return (0);
 // }

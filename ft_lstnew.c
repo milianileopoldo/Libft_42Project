@@ -6,7 +6,7 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 10:16:47 by mleopold          #+#    #+#             */
-/*   Updated: 2026/11/04 12:16:38 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/06 17:07:45 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(void *content)
 		new->content = content;
 		new->next = NULL;
 	}
-	return(new);
+	return (new);
 }
 
 // int main()

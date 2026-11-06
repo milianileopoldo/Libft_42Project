@@ -6,7 +6,7 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 14:46:10 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/16 15:08:05 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:35:07 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,33 +40,29 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] != '\0')
+	while (ft_isspace(str[i]))
+		i++;
+	if (ft_issign(str[i]))
 	{
-		while ((ft_issign(str[i])) || (ft_isspace(str[i])))
-		{
-			if (str[i] == '-')
-				sign *= -1;
-			if ((ft_isspace(str[i])) || (!(ft_isspace(str[i]))))
-				return (0);
-			i++;
-		}
-		while (ft_num(str[i]))
-		{
-			result = (result * 10) + (str[i] - '0');
-			i++;
-		}
-		return (result * sign);
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (ft_num(str[i]))
+	{
+		result = (result * 10) + (str[i] - '0');
+		i++;
 	}
 	return (result * sign);
 }
 
-// #include <stdlib.h>
-// #include <stdio.h>
+// #include "libft.h"
 // int main(void)
 // {
 //     printf("%d \n", ft_atoi(" ---+--+1234ab567"));
 // 	printf("%d \n", ft_atoi(" ---+--+abc1234ab567"));
 //     printf("%d \n", ft_atoi("   --42"));
 //     printf("%d \n", ft_atoi("42"));
+// 	printf("%d \n", ft_atoi("-17"));
 //     return (0);
 // }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/04 10:57:29 by mleopold          #+#    #+#             */
-/*   Updated: 2026/11/04 12:16:55 by mleopold         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_lstadd_front.c                                 :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/11/04 10:57:29 by username         #+#    #+#              */
+/*   Updated: 2026/11/06 17:32:02 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst | !new)
-		return;
-	new->next = *lst; 
+		return ;
+	new->next = *lst;
 	*lst = new;
 }
 

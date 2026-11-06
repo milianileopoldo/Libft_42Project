@@ -6,11 +6,11 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 11:04:57 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/21 14:08:47 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:15:30 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {

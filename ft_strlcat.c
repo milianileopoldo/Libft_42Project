@@ -6,14 +6,13 @@
 /*   By: mleopold <mleopold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 12:43:09 by mleopold          #+#    #+#             */
-/*   Updated: 2026/10/16 11:58:52 by mleopold         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:59:10 by mleopold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dest_len;
 	size_t	src_len;
