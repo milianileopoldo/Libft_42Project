@@ -34,5 +34,4 @@ void	*ft_memset(void *str, int c, size_t n)
 // 	printf("Before: %s\n", str);
 // 	ft_memset(str, 'X', 5);
 // 	printf("After:  %s\n", str);
-// 	return (0);
-// }
+
